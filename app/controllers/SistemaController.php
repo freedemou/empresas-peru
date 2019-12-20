@@ -5,8 +5,7 @@ use Phalcon\Mvc\Model\Query;
 class SistemaController extends ControllerBase
 {
 
-    public function indexAction()
-    {
+    public function indexAction(){
 
     }
 
