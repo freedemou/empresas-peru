@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <base href="/">
+    <meta charset="UTF-8">
+    <title>Empresas Perú</title>
+    <meta name="robots" content="NOINDEX">
+    <link rel="stylesheet" href="<?php echo $this->url->get('css/bootstrap.css'); ?>">
+    <link rel="stylesheet" href="<?php echo $this->url->get('css/fontawesome.css'); ?>">
+    <link rel="stylesheet" href="<?php echo $this->url->get('css/brands.css'); ?>">
+    <link rel="stylesheet" href="<?php echo $this->url->get('css/solid.css'); ?>">
+    <link rel="stylesheet" href="<?php echo $this->url->get('css/style.css'); ?>">
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="logo">
+                    <img src="img/logo.png">
+                </div>
+            </div>
+            <div class="col-md-8">
+                <nav class="menu">
+                    <ul>
+                        <li><a href="javascript:void(0)">Inicio</a></li>
+                        <li><a href="javascript:void(0)">Empresas</a></li>
+                        <li><a href="javascript:void(0)">Integración</a></li>
+                        <li><a href="javascript:void(0)">Api</a></li>
+                        <li><a href="javascript:void(0)">Planes</a></li>
+                        <li><a href="javascript:void(0)">Contacto</a></li>
+                        <li><a href="javascript:void(0)" class="sp-btn sp-btn-blue">Ingresar</a></li>
+                        <li><a href="javascript:void(0)" class="sp-btn sp-btn-light-blue">Registro</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+<section class="banner">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="informacion">
+                    <h1 class="h1">Información Empresarial en Línea</h1>
+                    <p>Datos de más de 1 Millón de empresas en tiempo real</p>
+                    <p>Información Sucursales</p>
+                    <p>Representantes Legales</p>
+                    <p>Record de número de trabajadores</p>
+                    <a href="javascript:void(0)" class="sp-btn sp-btn-light-blue sp-btn-shadow">Ver Planes</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="imagen">
+                    <img src="img/informacion.png">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<?php echo $this->getContent(); ?>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="logo">
+                    <img src="img/f_logo.png">
+                </div>
+            </div>
+            <div class="col-md-8">
+                <nav class="menu">
+                    <ul>
+                        <li>Términos y Condiciones</li>
+                        <li>Contáctenos</li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/fontawesome.js"></script>
+</body>
+</html>
