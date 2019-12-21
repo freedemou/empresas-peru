@@ -135,16 +135,19 @@ header .menu ul li a{
     padding: 4px 6px;
     width: 580px;
 }
+.busqueda-empresas .input-group > * {
+	display: inline-block;
+	margin-right: -4px;
+}
 .busqueda-empresas .input-group input{
-	width: 68%;
-    border: none;
-    outline: none;
-    padding: 0 12px;
-    color: #4e4e4e;
+	border: none;
+	outline: none;
+	padding: 0 12px;
+	color:#4e4e4e;
+	width: 80%;
 }
 .busqueda-empresas .input-group button{
-	width: 32%;
-	padding: 8px 36px;
+	width: 20%;
 }
 .rubros-importantes{
 	width: 100%;
