@@ -115,11 +115,11 @@ $di->setShared('session', function () {
 /**
  * Register router
  */
-$di->setShared('router', function () {
+/*$di->setShared('router', function () {
     $router = new Router();
     $router->setUriSource(
         Router::URI_SOURCE_SERVER_REQUEST_URI
     );
-
     return $router;
-});
+});*/
+$di->set('router', $router);

@@ -12,7 +12,7 @@ class IndexController extends ControllerBase
     }
 
     public function empresasAction(){
-
+        
     }
 
     public function integracionAction(){
