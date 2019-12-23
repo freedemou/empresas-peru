@@ -37,10 +37,31 @@ type Monitor implements Person {
   phone: String
 }
 
-type Empresa {
+type Cliente {
   _id: ID!
   ruc: String!
   razonsocial: String
+  direccion: String
+  tipoempresa: String
+  actividades_economicas: [ClienteActividadesEconomicas]
+}
+
+type ClienteActividadesEconomicas {
+  cui: String
+  actividad: String
+}
+
+type Contacto {
+  _id: ID!
+  dni: String!
+  nombres: String!
+  correo_personal: String
+}
+
+type TipoEmpresa {
+  _id: ID!
+  nombre: String!
+  observaciones: String
 }
 
 type Query {
@@ -54,8 +75,10 @@ type Query {
   getPerson(id: ID!): Person
   "Ejecuta una busqueda global"
   searchItems(keyword: String!) : [GlobalSearch]
-  "Devuelve todas empresas"
-  getEmpresas(cantidad: Int!): [Empresa]
+  "Devuelve todos los clientes"
+  getClientes(cantidad: Int!): [Cliente]
+  "Devuelve todos los contactos"
+  getContactos(cantidad: Int!): [Contacto]
 }
 
 input CourseInput {

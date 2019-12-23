@@ -2,11 +2,13 @@
 
 const { MongoClient } = require('mongodb')
 
-let DB_USER = '$pyroho$t'
-let DB_PASSWD = 'spyrohost'
-let DB_HOST = 'goliat.spyrohost.com'
-let DB_PORT = '27017'
-let DB_NAME = 'branif_crm'
+const {
+  DB_USER,
+  DB_PASSWD,
+  DB_HOST,
+  DB_PORT,
+  DB_NAME
+} = process.env
 
 const mongoUrl = `mongodb://${DB_USER}:${DB_PASSWD}@${DB_HOST}:${DB_PORT}/${DB_NAME}`
 let connection
@@ -23,6 +25,7 @@ async function connectDB () {
     connection = client.db(DB_NAME)
   } catch (error) {
     console.error('Could not connect to db', mongoUrl, error)
+    process.exit(1)
   }
 
   return connection

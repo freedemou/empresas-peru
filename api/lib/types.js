@@ -46,5 +46,24 @@ module.exports = {
 
       return 'Student'
     }
-  }
+  },
+  Cliente: {
+    tipoempresa: async ({ tipoempresa }) => {
+      let db
+      let tipoEmpresaData
+      let idtipoempresa = tipoempresa
+      try {
+        db = await connectDb()
+        tipoEmpresaData = idtipoempresa
+          ? await db.collection('ncl_tipoempresa').findOne({
+            _id: ObjectID(idtipoempresa)
+          })
+          : ''
+      } catch (error) {
+        errorHandler(error)
+      }
+
+      return tipoEmpresaData.nombre
+    }
+  },
 }

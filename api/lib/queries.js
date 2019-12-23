@@ -91,7 +91,7 @@ module.exports = {
 
     return items
   },
-  getEmpresas: async (root, {
+  getClientes: async (root, {
     cantidad
   }) => {
     let db
@@ -100,6 +100,21 @@ module.exports = {
     try {
       db = await connectDb()
       sunat = await db.collection('ncl_clientes').find().limit(cantidad).toArray()
+    } catch (error) {
+      errorHandler(error)
+    }
+
+    return sunat
+  },
+  getContactos: async (root, {
+    cantidad
+  }) => {
+    let db
+    let sunat = []
+
+    try {
+      db = await connectDb()
+      sunat = await db.collection('ncl_contactos').find().limit(cantidad).toArray()
     } catch (error) {
       errorHandler(error)
     }
