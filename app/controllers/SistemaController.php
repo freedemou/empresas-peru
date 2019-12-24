@@ -1,7 +1,5 @@
 <?php
 
-use Phalcon\Mvc\Model\Query;
-
 class SistemaController extends ControllerBase
 {
 

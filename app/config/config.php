@@ -23,7 +23,11 @@ return new \Phalcon\Config([
         'viewsDir'       => APP_PATH . '/views/',
         'pluginsDir'     => APP_PATH . '/plugins/',
         'libraryDir'     => APP_PATH . '/library/',
+        'servicesDir'    => APP_PATH . '/services/',
         'cacheDir'       => BASE_PATH . '/cache/',
         'baseUri'        => '/',
+    ],
+    'api' => [
+        'url' => 'http://localhost:3000/api'
     ]
 ]);

@@ -123,3 +123,10 @@ $di->setShared('router', function () {
 
     return $router;
 });
+
+$di->setShared(
+    'graphql',
+    function () {
+        return new GraphQLClient();
+    }
+);
