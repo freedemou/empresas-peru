@@ -8,9 +8,7 @@ class IndexController extends ControllerBase
     	$data = [
     		'data_usuario'=> $data_usuario
     	];
-        $dataClientes = $this->graphql->obtenerClientes();
-        print_r($dataClientes);
-        die;
+        //$dataClientes = $this->graphql->obtenerClientes();
     	$this->view->setVars($data);
     }
 

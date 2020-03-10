@@ -4,78 +4,61 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitd2720ae542b2ad5c8739b9cb84a953a2
+class ComposerStaticInit285a0a83fb2581a0ae938ce744d9d6c8
 {
     public static $files = array (
-        '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
-        'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
-        'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
-        '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
+        'ad155f8f1cf0d418fe49e248db8c661b' => __DIR__ . '/..' . '/react/promise/src/functions_include.php',
+        '8592c7b0947d8a0965a9e8c3d16f9c24' => __DIR__ . '/..' . '/elasticsearch/elasticsearch/src/autoload.php',
     );
 
     public static $prefixLengthsPsr4 = array (
-        'S' => 
+        'R' => 
         array (
-            'Softonic\\OAuth2\\Guzzle\\Middleware\\' => 34,
-            'Softonic\\GraphQL\\' => 17,
+            'React\\Promise\\' => 14,
         ),
         'P' => 
         array (
-            'Psr\\Http\\Message\\' => 17,
-            'Psr\\Cache\\' => 10,
-        ),
-        'L' => 
-        array (
-            'League\\OAuth2\\Client\\' => 21,
+            'Psr\\Log\\' => 8,
         ),
         'G' => 
         array (
-            'GuzzleHttp\\Psr7\\' => 16,
-            'GuzzleHttp\\Promise\\' => 19,
-            'GuzzleHttp\\' => 11,
+            'GuzzleHttp\\Stream\\' => 18,
+            'GuzzleHttp\\Ring\\' => 16,
+        ),
+        'E' => 
+        array (
+            'Elasticsearch\\' => 14,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Softonic\\OAuth2\\Guzzle\\Middleware\\' => 
+        'React\\Promise\\' => 
         array (
-            0 => __DIR__ . '/..' . '/softonic/guzzle-oauth2-middleware/src',
+            0 => __DIR__ . '/..' . '/react/promise/src',
         ),
-        'Softonic\\GraphQL\\' => 
+        'Psr\\Log\\' => 
         array (
-            0 => __DIR__ . '/..' . '/softonic/graphql-client/src',
+            0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
         ),
-        'Psr\\Http\\Message\\' => 
+        'GuzzleHttp\\Stream\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
+            0 => __DIR__ . '/..' . '/ezimuel/guzzlestreams/src',
         ),
-        'Psr\\Cache\\' => 
+        'GuzzleHttp\\Ring\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/cache/src',
+            0 => __DIR__ . '/..' . '/ezimuel/ringphp/src',
         ),
-        'League\\OAuth2\\Client\\' => 
+        'Elasticsearch\\' => 
         array (
-            0 => __DIR__ . '/..' . '/league/oauth2-client/src',
-        ),
-        'GuzzleHttp\\Psr7\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/guzzlehttp/psr7/src',
-        ),
-        'GuzzleHttp\\Promise\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/guzzlehttp/promises/src',
-        ),
-        'GuzzleHttp\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/guzzlehttp/guzzle/src',
+            0 => __DIR__ . '/..' . '/elasticsearch/elasticsearch/src/Elasticsearch',
         ),
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitd2720ae542b2ad5c8739b9cb84a953a2::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitd2720ae542b2ad5c8739b9cb84a953a2::$prefixDirsPsr4;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit285a0a83fb2581a0ae938ce744d9d6c8::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit285a0a83fb2581a0ae938ce744d9d6c8::$prefixDirsPsr4;
 
         }, null, ClassLoader::class);
     }

@@ -131,3 +131,12 @@ $di->setShared(
         return new GraphQLClient();
     }
 );
+
+$di->set('mongo', function() {
+    $mongo = new Mongo();
+    return $mongo->selectDb("test");
+}, true);
+
+$di->set('collectionManager', function(){
+    return new Phalcon\Mvc\Collection\Manager();
+}, true);

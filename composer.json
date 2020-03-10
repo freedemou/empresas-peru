@@ -1,5 +1,5 @@
 {
     "require": {
-        "softonic/graphql-client": "^1.2"
+        "elasticsearch/elasticsearch": "^7.0"
     }
 }
