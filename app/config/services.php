@@ -112,31 +112,16 @@ $di->setShared('session', function () {
     return $session;
 });
 
-/**
- * Register router
- */
-/*$di->setShared('router', function () {
-    $router = new Router();
-    $router->setUriSource(
-        Router::URI_SOURCE_SERVER_REQUEST_URI
-    );
-    return $router;
-});*/
-
 $di->set('router', $router);
 
-$di->setShared(
-    'graphql',
-    function () {
-        return new GraphQLClient();
+/**
+ * Modelos
+ */
+
+$di->setShared('ClienteCollection',function () {
+        $config = $this->getConfig();
+        $collection = new Mongo($config, 'ncl_clientes');
+        $conection = $collection->connect();
+        return new ClienteCollection($conection);
     }
 );
-
-$di->set('mongo', function() {
-    $mongo = new Mongo();
-    return $mongo->selectDb("test");
-}, true);
-
-$di->set('collectionManager', function(){
-    return new Phalcon\Mvc\Collection\Manager();
-}, true);

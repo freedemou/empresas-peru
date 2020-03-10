@@ -4,11 +4,11 @@ class IndexController extends ControllerBase
 {
 
     public function indexAction(){
+        $data_clientes = $this->ClienteCollection->obtenerClientes();
     	$data_usuario = $this->modelsManager->executeQuery('SELECT * FROM SysUsuarios')->toArray();
     	$data = [
     		'data_usuario'=> $data_usuario
     	];
-        //$dataClientes = $this->graphql->obtenerClientes();
     	$this->view->setVars($data);
     }
 

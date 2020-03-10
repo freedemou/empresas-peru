@@ -15,6 +15,13 @@ return new \Phalcon\Config([
         'dbname'      => 'db_linostoy',
         'charset'     => 'utf8',
     ],
+    'mongodb'=>[
+        'host'=>'goliat.spyrohost.com',
+        'port'=>'27017',
+        'username'=>'$pyroho$t',
+        'password'=>'spyrohost',
+        'dbname'=>'branif_crm',
+    ],
     'application' => [
         'appDir'         => APP_PATH . '/',
         'controllersDir' => APP_PATH . '/controllers/',
